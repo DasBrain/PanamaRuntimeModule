@@ -16,6 +16,7 @@ public class Launcher {
 		var controller = ModuleLayer.defineModulesWithOneLoader(cf, List.of(ModuleLayer.boot()),
 				ClassLoader.getSystemClassLoader());
 		var extraModule = controller.layer().findModule("plugin").orElseThrow();
+        extraModule.enableNativeAccess();
 		controller.addOpens(extraModule, "plugin", Launcher.class.getModule());
 		Class<?> mainClass = Class.forName(extraModule, "plugin.PanamaTest");
 		Method m = mainClass.getMethod("main", String[].class);

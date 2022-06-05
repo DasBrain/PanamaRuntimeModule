@@ -9,6 +9,6 @@ Compile with
 	
 Run with
 
-    java --enable-preview --enable-native-access=plugin -p bin/launcher -m launcher/launcher.Launcher
+    java --enable-preview --enable-native-access=launcher -p bin/launcher -m launcher/launcher.Launcher
 	
 For convinience `build.bat`/`build.sh` will run `javac`, and `run.bat`/`run.sh` will run `java`.
