@@ -5,10 +5,10 @@ This is a small [reproducer](https://en.wikipedia.org/wiki/Minimal_reproducible_
 
 Compile with 
 
-    javac --release 18 -d bin --module launcher,plugin --module-source-path src
+    javac --release 19 --enable-preview -d bin --module launcher,plugin --module-source-path src
 	
 Run with
 
-    java --enable-native-access=plugin -p bin/launcher -m launcher/launcher.Launcher
+    java --enable-preview --enable-native-access=plugin -p bin/launcher -m launcher/launcher.Launcher
 	
 For convinience `build.bat`/`build.sh` will run `javac`, and `run.bat`/`run.sh` will run `java`.

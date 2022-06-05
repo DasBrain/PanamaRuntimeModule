@@ -1,10 +1,10 @@
 package plugin;
 
-import jdk.incubator.foreign.CLinker;
+import java.lang.foreign.Linker;
 
 public class PanamaTest {
 	public static void main(String[] args) {
-		// CLinker.systemCLinker() is a restricted method.
-		CLinker.systemCLinker();
+		// Linker.nativeLinker() is a restricted method.
+		Linker.nativeLinker();
 	}
 }
